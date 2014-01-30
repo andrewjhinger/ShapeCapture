@@ -5,11 +5,10 @@ Windows form application
 
 ###Concepts used:
 
-Text..
+Interfaces and Interface Casting
 
 ###Functionality:
 
-Text..
-
+User uses a mouse to move a square on the screen to capture moving circles.
 
 ![alt tag](https://raw.github.com/andrewjhinger/ShapeCapture/master/Capture.JPG)
