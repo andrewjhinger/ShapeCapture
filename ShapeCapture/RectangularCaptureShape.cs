@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace ShapeCapture
 {
-    //AH inheritance from Shape, and the implementation of ICaptureShape.
+    //inheritance from Shape, and the implementation of ICaptureShape.
     public class RectangleCaptureShape : Shape, ICaptureShape
     {
         public RectangleCaptureShape(Random random, Size dimensions, Size boardSize, Color color, int points)
@@ -24,7 +24,7 @@ namespace ShapeCapture
             set { _points = value; }
         }
 
-        //AH Draws Rectangles
+        //Draws Rectangles
         public override void Draw(Graphics graphics)
         {
             using (SolidBrush brush = new SolidBrush(base.FillColor))
