@@ -8,7 +8,7 @@ namespace ShapeCapture
 {
     public abstract class Shape : IShape
     {
-        //AH enum controls both where the shape starts, and the direction the shape will move when animated.
+        //enum controls both where the shape starts, and the direction the shape will move when animated.
         private enum StartingPositions { Top, Bottom, Left, Right }
 
         private StartingPositions _startPosition;
@@ -37,11 +37,11 @@ namespace ShapeCapture
         }
         public bool Hit(Point location, Size dimensions)
         {
-            // AH Check rectangle 1 against rectangle 2 to detect a collision checking left, right,
-            // Ah top, then bottom to see if any way they collide, then negate result
+            // Check rectangle 1 against rectangle 2 to detect a collision checking left, right,
+            // top, then bottom to see if any way they collide, then negate result
             Rectangle r1 = new Rectangle(location, dimensions);
             Rectangle r2 = new Rectangle(_location, _dimensions);
-            //AH test to find out whether any of the sides of one rectangle could possibly be within the other rectangle.
+            //test to find out whether any of the sides of one rectangle could possibly be within the other rectangle.
             return !(r1.X + r1.Width < r2.X || r1.Y + r1.Height < r2.Y || r1.X > r2.X + r2.Width || r1.Y > r2.Y + r2.Height);
         }
         public void Animate(Size boardSize)
@@ -71,7 +71,7 @@ namespace ShapeCapture
 
         public void Reset(Random random, Size boardSize)
         {
-            // AH Generate random starting position
+            // Generate random starting position
             var values = Enum.GetValues(typeof(StartingPositions));
             int positionIndex = random.Next(values.Length);
             int counter = 0;
@@ -83,7 +83,7 @@ namespace ShapeCapture
                     break;
                 }
             }
-            // AH Based on starting position, generate actual random x or y
+            // Based on starting position, generate actual random x or y
             switch (_startPosition)
             {
                 case StartingPositions.Top:
