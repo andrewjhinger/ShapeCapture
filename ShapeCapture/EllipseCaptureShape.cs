@@ -8,7 +8,7 @@ namespace ShapeCapture
 {
     public class EllipseCaptureShape : Shape, ICaptureShape
     {
-        //AH inheritance from Shape, and the implementation of ICaptureShape.
+        //inheritance from Shape, and the implementation of ICaptureShape.
         public EllipseCaptureShape(Random random, Size dimensions, Size boardSize, Color color, int Points)
             : base(color)
         {
@@ -25,7 +25,7 @@ namespace ShapeCapture
         }
 
 
-        //AH Draws Ellipse
+        //Draws Ellipse
         public override void Draw(Graphics graphics)
         {
             using (SolidBrush brush = new SolidBrush(base.FillColor))
