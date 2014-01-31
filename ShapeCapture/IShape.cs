@@ -8,7 +8,7 @@ namespace ShapeCapture
 {
     public interface IShape
     {
-        //AH properties and a method for creating shapes, detecting a collision, and a method to move or animate a shape. 
+        //properties and a method for creating shapes, detecting a collision, and a method to move or animate a shape. 
         Size Dimensions { get; set; }
         Point Location { get; set; }
         Color FillColor { get; set; }
