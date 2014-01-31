@@ -12,8 +12,8 @@ namespace ShapeCapture
         public Size BoardSize { set { _boardSize = value; } }
         private Random _random = new Random();
         private Collector _collector;
-        //an array of interface implementations of the ICaptureShape interface, 
-        //which means that any object we store in this array must implement the ICaptureShape interface.
+        
+        //an array of interface implementations of the ICaptureShape interface
         private ICaptureShape[] _captureShapes;
         private ICaptureShape[] _deductShapes;
 
@@ -51,7 +51,6 @@ namespace ShapeCapture
         public void DrawCollectorShapes(Graphics graphics)
         {
 
-            // foreach in C# is read-only (immutable). 
             foreach (ICaptureShape collectorShape in _captureShapes)
                 collectorShape.Draw(graphics);
             foreach (ICaptureShape collectorShape in _deductShapes)
@@ -63,7 +62,7 @@ namespace ShapeCapture
 
         public void AnimateCollectorShapes(int value)
         {
-            //AH using for statement to change 
+            //using for statement to change 
 
                 for (int i = 0; i < _captureShapes.Length - value; i++)
                 {
