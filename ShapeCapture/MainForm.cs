@@ -41,7 +41,7 @@ namespace ShapeCapture
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            //AH instantiate the _captureGame game object in the Form Shown event
+            //instantiate the _captureGame game object in the Form Shown event
 
             _captureGame = new CaptureGame(_maxShapes, mainPictureBox.ClientSize);
         }
@@ -53,13 +53,13 @@ namespace ShapeCapture
 
         private void mainPictureBox_MouseMove(object sender, MouseEventArgs e)
         {
-            //AHupdate the position of Controller object in the MouseMove event
+            //update the position of Controller object in the MouseMove event
             if (_playGame) _captureGame.CollectorPosition = new Point(e.X, e.Y);
         }
 
         private void mainPictureBox_Paint(object sender, PaintEventArgs e)
         {
-            //AH  The PictureBox Paint event redraws the Controller and Capture Shape objects, and draws the game score on the PictureBox control. 
+            //The PictureBox Paint event redraws the Controller and Capture Shape objects, and draws the game score on the PictureBox control. 
             _captureGame.DrawCollector(e.Graphics);
             _captureGame.DrawCollectorShapes(e.Graphics);
             string gameStatus = "Hits: " + _captureGame.CollectorHits + "  -  Points: " + _captureGame.CollectorPoints;
@@ -73,7 +73,7 @@ namespace ShapeCapture
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            //AH Timer Tick events to animate the Capture Shape objects and call the PictureBox Invalidate method to raise the Paint event.
+            //Timer Tick events to animate the Capture Shape objects and call the PictureBox Invalidate method to raise the Paint event.
             if (_playGame)
             {
 
